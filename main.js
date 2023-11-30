@@ -50,3 +50,25 @@ hamburger.addEventListener('click', () => {
   nav.classList.add('active')
   blackBg.classList.add('on')
 })
+
+// plus minus product function
+const num = document.querySelector('.addNum')
+const minus = document.querySelector('.minus')
+const plus = document.querySelector('.plus')
+
+minus.addEventListener('click', () => {
+  let numParsed = num.childNodes[0].data.toString()
+  if (numParsed < 0) {
+    return;
+  } else {
+    numParsed--;
+    num.textContent = numParsed 
+  }
+})
+plus.addEventListener('click', () => {
+    let numParsed = num.childNodes[0].data.toString()
+    numParsed++;
+    num.textContent = numParsed 
+})
+
+// add to card function
