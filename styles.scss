@@ -59,6 +59,57 @@ header {
   height: 30px;
   // padding-right: 15px;
 }
+.headerCartWrap {
+  position: relative;
+}
+// Shopping Cart stying and position and shit
+.shoppingCart.on {
+  color: hsl(219, 9%, 45%);
+  font-weight: 400;
+  font-size: 10px;
+  position: absolute;
+  top: 90px;
+  // min-height: 500px;
+  width: 95%; 
+  background-color: white;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  .headCart {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid hsl(223, 64%, 98%);
+    .boldCart {
+      font-weight: 700;
+    }
+  }
+  .products {
+    display: flex;
+    .product {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      #prodImg {
+        height: 15px;
+        width: 15px;
+      }
+      .prodText {
+        
+      }
+      img {
+        width: 45px;
+        height: 45px;
+      }
+      .productPriceWrap {
+        .calcPrice {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
 
 #slider {
   // width: 100%;

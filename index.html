@@ -26,31 +26,56 @@
     </style>
   </head>
   <body>
-    <div class="blackBackground on"></div>
-    <header>
-      <div class="headerLeft">
-        <button class="hamburger">
-          <img class="hamburgerImg" src="images/icon-menu.svg" alt="menu" />
-        </button>
-        <img src="images/logo.svg" alt="Logo" />
+    <div class="blackBackground"></div>
+    <div class="headerCartWrap">
+      <header>
+        <div class="headerLeft">
+          <button class="hamburger">
+            <img class="hamburgerImg" src="images/icon-menu.svg" alt="menu" />
+          </button>
+          <img src="images/logo.svg" alt="Logo" />
+        </div>
+        <div class="headerRight">
+          <button class="cartButton">
+            <img src="images/icon-cart.svg" alt="Cart" />
+            <span class="cartCount">0</span>
+          </button>
+          <button>
+            <img class="avatar" src="images/image-avatar.png" alt="" />
+          </button>
+        </div>
+      </header>
+      <div class="shoppingCart on">
+        <div class="headCart">
+          <p class="boldCart">Cart</p>
+        </div>
+        <div class="products">
+          <div class="product">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" />
+            <div class="prodText">
+              <p>Fall Limited Edition Sneakers</p>
+              <div class="productPriceWrap">
+                <!-- 
+            make js function to calculate the price =
+            edit the excisting function to do just that
+            -->
+                <p>$125.00 x <span class="times">1</span> <span class="calcPrice">$125.00</span></p>
+                
+              </div>
+            </div>
+          <img id="prodImg" src="images/icon-delete.svg" alt="" />
+          </div>
+        </div>
+        <button class="checkout">Checkout</button>
       </div>
-      <div class="headerRight">
-        <button class="cartButton">
-          <img src="images/icon-cart.svg" alt="Cart" />
-          <span class="cartCount">0</span>
-        </button>
-        <button>
-          <img class="avatar" src="images/image-avatar.png" alt="" />
-        </button>
-      </div>
-    </header>
+    </div>
     <!-- What to do -->
     <!-- 
       add functionality to floatCloseButton
       most styling
       
     -->
-    <nav class="navigation active">
+    <nav class="navigation">
       <div class="navWrap">
         <button class="floatCloseButton">
           <img src="images/icon-close.svg" alt="" />
@@ -89,9 +114,9 @@
     </div>
     <div class="addWrap">
       <div class="amountWrap">
-        <img class="minus" src="images/icon-minus.svg" alt="-">
+        <img class="minus" src="images/icon-minus.svg" alt="-" />
         <p class="addNum">0</p>
-        <img class="plus" src="images/icon-plus.svg" alt="+">
+        <img class="plus" src="images/icon-plus.svg" alt="+" />
       </div>
       <button class="addCartBtn">Add to cart</button>
     </div>
