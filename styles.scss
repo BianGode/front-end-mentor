@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 body {
   margin: 0;
 }
 // Mobile first
 * {
   box-sizing: border-box;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 header {
   display: flex;
@@ -14,32 +14,67 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-header > div {
-  gap: 15px;
-  display: flex;
-  align-items: center;
-  // justify-content: space-between;
+header {
+  div {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    height: fit-content;
+    width: fit-content;
+  }
+  .hamburger {
+    padding-left: 15px;
+    padding-right: 10px;
+  }
 }
-
-header button {
-  background-color: transparent;
-  border: none;
-  height: fit-content;
-  width: fit-content;
-;
+.headerLeft {
+  display: block;
 }
 .avatar {
   height: 30px;
+  // padding-right: 15px;
 }
-.ctrl {
-  width: 30px;
-  height: 30px;
-  border: none;
-  border-radius: 180px;
-  margin: 10px;
+
+#slider {
+  // width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
+  #back {
+    background-image: url('images/icon-previous.svg');
+
+  }
+  #forward {
+    background-image: url('images/icon-next.svg');
+  }
+  .ctrl {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 180px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    img {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+    }
+  }
 }
 // styling for the sidebar
 .navigation.active {
@@ -48,7 +83,7 @@ header button {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 70%; 
+  width: 70%;
   background-color: white;
   z-index: 21;
   transition: 0.2s linear;
@@ -68,8 +103,8 @@ header button {
   transition: 0.2s ease;
 }
 .navWrap {
-  padding-top: 10px;
-  padding-left: 15px;
+  padding-top: 20px;
+  padding-left: 20px;
   // padding: 40px;
 }
 .sideBarItemWrap {
@@ -78,7 +113,6 @@ header button {
   padding-top: 2.5rem;
   gap: 1rem;
 }
-
 
 .blackBackground.on {
   transition: 0.2s ease;
@@ -92,14 +126,4 @@ header button {
   height: 100vh;
 }
 
-
-#slider {
-  // width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// text styling

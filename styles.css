@@ -16,12 +16,11 @@ header {
   justify-content: space-between;
 }
 
-header > div {
-  gap: 15px;
+header div {
+  gap: 10px;
   display: flex;
   align-items: center;
 }
-
 header button {
   background-color: transparent;
   border: none;
@@ -30,20 +29,49 @@ header button {
   width: -moz-fit-content;
   width: fit-content;
 }
+header .hamburger {
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.headerLeft {
+  display: block;
+}
 
 .avatar {
   height: 30px;
 }
 
-.ctrl {
+#slider {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#slider #back {
+  background-image: url("images/icon-previous.svg");
+}
+#slider #forward {
+  background-image: url("images/icon-next.svg");
+}
+#slider .ctrl {
   width: 30px;
   height: 30px;
   border: none;
   border-radius: 180px;
   margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+#slider .ctrl img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .navigation.active {
@@ -76,8 +104,8 @@ header button {
 }
 
 .navWrap {
-  padding-top: 10px;
-  padding-left: 15px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .sideBarItemWrap {
@@ -96,14 +124,4 @@ header button {
   opacity: 75%;
   width: 100vw;
   height: 100vh;
-}
-
-#slider {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }/*# sourceMappingURL=styles.css.map */
