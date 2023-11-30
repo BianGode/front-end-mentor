@@ -71,4 +71,18 @@ plus.addEventListener('click', () => {
     num.textContent = numParsed 
 })
 
-// add to card function
+// add to cart function
+const addToCartButton = document.querySelector('.addCartBtn')
+const cartCount = document.querySelector('.cartCount')
+
+const addToCard = () => {
+  if (cartCount.classList.contains('on')) {
+    let tempcartCount = cartCount.childNodes[0].data.toString()
+    cartCount.textContent = parseInt(tempcartCount) + parseInt(num.childNodes[0].data.toString())
+  } else {
+    cartCount.classList.add('on')
+    cartCount.textContent = num.childNodes[0].data.toString();
+  }
+}
+
+addToCartButton.addEventListener('click', addToCard)

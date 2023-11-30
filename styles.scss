@@ -30,6 +30,27 @@ header {
     padding-left: 15px;
     padding-right: 10px;
   }
+  .addWrap {
+    position: relative;
+  }
+  .cartButton {
+    position: relative;
+    .cartCount.on {
+      background-color: hsl(26, 100%, 55%);
+      color: white;
+      width: 20px;
+      height: 15px;
+      position: absolute;
+      display: block;
+      top: -5px;
+      right: -5px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .cartCount {
+      display: none;
+    }
+  }
 }
 .headerLeft {
   display: block;
