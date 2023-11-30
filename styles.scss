@@ -64,17 +64,20 @@ header {
 }
 // Shopping Cart stying and position and shit
 .shoppingCart.on {
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
   color: hsl(219, 9%, 45%);
   font-weight: 400;
   font-size: 10px;
   position: absolute;
   top: 90px;
-  // min-height: 500px;
   width: 95%; 
   background-color: white;
   border-radius: 7px;
   display: flex;
   flex-direction: column;
+  transition: display 0.3s ease;
   .headCart {
     width: 100px;
     display: flex;
@@ -109,6 +112,10 @@ header {
       }
     }
   }
+}
+.shoppingCart {
+  display: none;
+  transition: 2s ease;
 }
 
 #slider {

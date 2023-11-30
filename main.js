@@ -86,3 +86,10 @@ const addToCard = () => {
 }
 
 addToCartButton.addEventListener('click', addToCard)
+
+const cartButton = document.querySelector('.cartButton')
+const shoppingCart = document.querySelector('.shoppingCart')
+
+cartButton.addEventListener('click',() => {
+  shoppingCart.classList.toggle('on');
+}) 
