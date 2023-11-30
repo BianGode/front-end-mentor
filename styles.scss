@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+body {
+  margin: 0;
+}
 // Mobile first
 * {
   box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 header {
   display: flex;
@@ -16,19 +21,15 @@ header > div {
   // justify-content: space-between;
 }
 
-// styling for the navbar
-.navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 50%;
-  
-  background-color: grey;
+header button {
+  background-color: transparent;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+;
 }
-
 .avatar {
-  height: 50px;
+  height: 30px;
 }
 .ctrl {
   width: 30px;
@@ -40,10 +41,62 @@ header > div {
   align-items: center;
   justify-content: center;
 }
+// styling for the sidebar
+.navigation.active {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 70%; 
+  background-color: white;
+  z-index: 21;
+  transition: 0.2s linear;
+  .floatCloseButton {
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
+    border: none;
+  }
+  li {
+    font-weight: bold;
+    list-style: none;
+  }
+}
+.navigation {
+  display: none;
+  transition: 0.2s ease;
+}
+.navWrap {
+  padding-top: 10px;
+  padding-left: 15px;
+  // padding: 40px;
+}
+.sideBarItemWrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  gap: 1rem;
+}
+
+
+.blackBackground.on {
+  transition: 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 0%, 0%);
+  opacity: 75%;
+  // z-index: 99;
+  width: 100vw;
+  height: 100vh;
+}
+
 
 #slider {
+  // width: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   min-height: 300px;
   display: flex;

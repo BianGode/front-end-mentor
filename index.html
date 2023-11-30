@@ -26,14 +26,21 @@
     </style>
   </head>
   <body>
+    <div class="blackBackground on"></div>
     <header>
       <div>
-        <img src="images/icon-menu.svg" alt="menu" />
+        <button class="hamburger">
+          <img class="hamburgerImg" src="images/icon-menu.svg" alt="menu" />
+        </button>
         <img src="images/logo.svg" alt="Logo" />
       </div>
       <div>
-        <img src="images/icon-cart.svg" alt="Cart" />
-        <img class="avatar" src="images/image-avatar.png" alt="" />
+        <button>
+          <img src="images/icon-cart.svg" alt="Cart" />
+        </button>
+        <button>
+          <img class="avatar" src="images/image-avatar.png" alt="" />
+        </button>
       </div>
     </header>
     <!-- What to do -->
@@ -43,12 +50,18 @@
       
     -->
     <nav class="navigation active">
-      <button class="floatCloseButton"></button>
-      <li>Collections</li>
-      <li>Men</li>
-      <li>Women</li>
-      <li>About</li>
-      <li>Contact</li>
+      <div class="navWrap">
+        <button class="floatCloseButton">
+          <img src="images/icon-close.svg" alt="" />
+        </button>
+        <div class="sideBarItemWrap">
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </div>
+      </div>
     </nav>
     <div id="slider">
       <button class="ctrl" id="back">

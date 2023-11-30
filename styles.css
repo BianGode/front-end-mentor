@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+body {
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 header {
@@ -16,17 +22,17 @@ header > div {
   align-items: center;
 }
 
-.navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 50%;
-  background-color: grey;
+header button {
+  background-color: transparent;
+  border: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .avatar {
-  height: 50px;
+  height: 30px;
 }
 
 .ctrl {
@@ -40,9 +46,61 @@ header > div {
   justify-content: center;
 }
 
+.navigation.active {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 70%;
+  background-color: white;
+  z-index: 21;
+  transition: 0.2s linear;
+}
+.navigation.active .floatCloseButton {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: transparent;
+  border: none;
+}
+.navigation.active li {
+  font-weight: bold;
+  list-style: none;
+}
+
+.navigation {
+  display: none;
+  transition: 0.2s ease;
+}
+
+.navWrap {
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.sideBarItemWrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  gap: 1rem;
+}
+
+.blackBackground.on {
+  transition: 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 0%, 0%);
+  opacity: 75%;
+  width: 100vw;
+  height: 100vh;
+}
+
 #slider {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   min-height: 300px;
   display: flex;

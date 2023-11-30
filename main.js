@@ -30,9 +30,23 @@ const Forward = () => {
   } else {
     count++
   }
-
   slider.style.backgroundImage = "url(" + images[count] + ")";
 }
 
 backBtn.addEventListener('click',() => Back())
 foreWardBtn.addEventListener('click', () => Forward())
+
+// closing and opening the sidebar
+const nav = document.querySelector('.navigation')
+const closeBtn = document.querySelector('.floatCloseButton')
+const blackBg = document.querySelector('.blackBackground')
+const hamburger = document.querySelector('.hamburger')
+
+closeBtn.addEventListener('click', () => {
+  nav.classList.remove('active')
+  blackBg.classList.remove('on')
+})
+hamburger.addEventListener('click', () => {
+  nav.classList.add('active')
+  blackBg.classList.add('on')
+})
