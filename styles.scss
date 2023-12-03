@@ -79,27 +79,36 @@ header {
   flex-direction: column;
   transition: display 0.3s ease;
   .headCart {
-    width: 100px;
+    width: 100%;
+    height: 75px;
     display: flex;
     align-items: center;
     border-bottom: 2px solid hsl(223, 64%, 98%);
     .boldCart {
+      font-size: 1.1rem;
       font-weight: 700;
+      padding: 1rem 1rem 2rem 1rem;
+      color: black;
+      margin: 0;
     }
   }
   .products {
     display: flex;
+    padding: 1rem;
+    // product in shoppingCart Style
     .product {
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
       #prodImg {
         height: 15px;
         width: 15px;
       }
       .prodText {
         width: 75%;
+        font-size: 1.1rem;
         :nth-child(1) {
           margin: 0;
           letter-spacing: 1x;
@@ -110,11 +119,29 @@ header {
         height: 45px;
       }
       .productPriceWrap {
+        .boldDsign {
+          font-weight: 700;
+          color: black;
+        }
         .calcPrice {
           font-weight: 700;
+          color: black;
         }
       }
     }
+
+  }
+  .checkout {
+    width: 90%;
+    margin-left: 1rem;
+    color: white;
+    font-weight: 700;
+    background-color: hsl(26, 100%, 55%);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
   }
 }
 .shoppingCart {
@@ -220,7 +247,7 @@ header {
   }
   .headText {
     color: hsl(220, 13%, 13%);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .lightGrey {
     color: hsl(219, 9%, 45%);

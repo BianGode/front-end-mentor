@@ -84,22 +84,29 @@ header .cartButton .cartCount {
   transition: display 0.3s ease;
 }
 .shoppingCart.on .headCart {
-  width: 100px;
+  width: 100%;
+  height: 75px;
   display: flex;
   align-items: center;
   border-bottom: 2px solid hsl(223, 64%, 98%);
 }
 .shoppingCart.on .headCart .boldCart {
+  font-size: 1.1rem;
   font-weight: 700;
+  padding: 1rem 1rem 2rem 1rem;
+  color: black;
+  margin: 0;
 }
 .shoppingCart.on .products {
   display: flex;
+  padding: 1rem;
 }
 .shoppingCart.on .products .product {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 .shoppingCart.on .products .product #prodImg {
   height: 15px;
@@ -107,6 +114,7 @@ header .cartButton .cartCount {
 }
 .shoppingCart.on .products .product .prodText {
   width: 75%;
+  font-size: 1.1rem;
 }
 .shoppingCart.on .products .product .prodText :nth-child(1) {
   margin: 0;
@@ -116,8 +124,25 @@ header .cartButton .cartCount {
   width: 45px;
   height: 45px;
 }
+.shoppingCart.on .products .product .productPriceWrap .boldDsign {
+  font-weight: 700;
+  color: black;
+}
 .shoppingCart.on .products .product .productPriceWrap .calcPrice {
   font-weight: 700;
+  color: black;
+}
+.shoppingCart.on .checkout {
+  width: 90%;
+  margin-left: 1rem;
+  color: white;
+  font-weight: 700;
+  background-color: hsl(26, 100%, 55%);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
 }
 
 .shoppingCart {
@@ -221,7 +246,7 @@ header .cartButton .cartCount {
 }
 .textWrap .headText {
   color: hsl(220, 13%, 13%);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 .textWrap .lightGrey {
   color: hsl(219, 9%, 45%);

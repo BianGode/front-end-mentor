@@ -83,6 +83,7 @@ const addToCard = () => {
     cartCount.classList.add('on')
     cartCount.textContent = num.childNodes[0].data.toString();
   }
+  calculatePriceFun()
 }
 
 addToCartButton.addEventListener('click', addToCard)
@@ -92,4 +93,25 @@ const shoppingCart = document.querySelector('.shoppingCart')
 
 cartButton.addEventListener('click',() => {
   shoppingCart.classList.toggle('on');
-}) 
+})
+
+// calcate price on shoppingCart and change value whenever is added to card(see 2 function above)
+const calculatedPriceEl = document.querySelector('.calcPrice')
+const timesEl = document.querySelector('.times')
+
+const calculatePriceFun = () => {
+  let tempTimes = parseInt(cartCount.childNodes[0].data)
+
+  timesEl.textContent = tempTimes;
+  let calcPrice = 125 * tempTimes
+  calculatedPriceEl.textContent = calcPrice
+}
+
+// delete the order function 
+const delButton = document.getElementById('prodImg')
+
+delButton.addEventListener('click' ,() => {
+  calculatedPriceEl.textContent = 0;
+  timesEl.textContent = 0;
+  cartCount.textContent = 0;
+})
