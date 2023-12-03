@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -26,109 +26,132 @@
     </style>
   </head>
   <body>
-    <div class="blackBackground"></div>
-    <div class="headerCartWrap">
-      <header>
-        <div class="headerLeft">
-          <button class="hamburger">
-            <img class="hamburgerImg" src="images/icon-menu.svg" alt="menu" />
-          </button>
-          <img src="images/logo.svg" alt="Logo" />
-        </div>
-        <div class="headerRight">
-          <button class="cartButton">
-            <img src="images/icon-cart.svg" alt="Cart" />
-            <span class="cartCount">0</span>
-          </button>
-          <button>
-            <img class="avatar" src="images/image-avatar.png" alt="" />
-          </button>
-        </div>
-      </header>
-      <div class="shoppingCart">
-        <div class="headCart">
-          <p class="boldCart">Cart</p>
-        </div>
-        <div class="products">
-          <div class="product">
-            <img src="images/image-product-1-thumbnail.jpg" alt="" />
-            <div class="prodText">
-              <p>Fall Limited Edition Sneakers</p>
-              <div class="productPriceWrap">
-                <!-- 
+    <div class="container">
+      <div class="blackBackground"></div>
+      <div class="headerCartWrap">
+        <header>
+          <div class="headerLeft">
+            <button class="hamburger">
+              <img class="hamburgerImg" src="images/icon-menu.svg" alt="menu" />
+            </button>
+            <img src="images/logo.svg" alt="Logo" />
+            <ul class="desktopNavList">
+              <li>Collections</li>
+              <li>Men</li>
+              <li>Women</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="headerRight">
+            <button class="cartButton">
+              <img src="images/icon-cart.svg" alt="Cart" />
+              <span class="cartCount">0</span>
+            </button>
+            <button>
+              <img class="avatar" src="images/image-avatar.png" alt="" />
+            </button>
+          </div>
+        </header>
+        <div class="shoppingCart">
+          <div class="headCart">
+            <p class="boldCart">Cart</p>
+          </div>
+          <div class="products">
+            <div class="product">
+              <img src="images/image-product-1-thumbnail.jpg" alt="" />
+              <div class="prodText">
+                <p>Fall Limited Edition Sneakers</p>
+                <div class="productPriceWrap">
+                  <!-- 
             make js function to calculate the price =
             edit the excisting function to do just that
             -->
-                <p>$125.00 x <span class="times">1</span> <span class="boldDsign">$</span><span class="calcPrice">125.00</span></p>
-                
+                  <p>
+                    $125.00 x <span class="times">1</span>
+                    <span class="boldDsign">$</span
+                    ><span class="calcPrice">125.00</span>
+                  </p>
+                </div>
               </div>
+              <img id="prodImg" src="images/icon-delete.svg" alt="" />
             </div>
-          <img id="prodImg" src="images/icon-delete.svg" alt="" />
           </div>
+          <button class="checkout">Checkout</button>
         </div>
-        <button class="checkout">Checkout</button>
       </div>
-    </div>
-    <!-- What to do -->
-    <!-- 
+      <!-- What to do -->
+      <!-- 
       add functionality to floatCloseButton
       most styling
       
     -->
-    <nav class="navigation">
-      <div class="navWrap">
-        <button class="floatCloseButton">
-          <img src="images/icon-close.svg" alt="" />
-        </button>
-        <div class="sideBarItemWrap">
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
+      <nav class="navigation">
+        <div class="navWrap">
+          <button class="floatCloseButton">
+            <img src="images/icon-close.svg" alt="" />
+          </button>
+          <div class="sideBarItemWrap">
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </div>
+        </div>
+      </nav>
+      <!-- todo = style contentcontainer to 80ish%
+      change layout and test
+      -->
+      <div class="contentContainer">
+        <div id="slider">
+          <button class="ctrl" id="back">
+            <!-- <img src="images/icon-previous.svg" alt="" srcset="" /> -->
+          </button>
+          <button class="ctrl" id="forward"></button>
+          <!-- slider  -->
+        </div>
+        <div class="textWrap">
+          <p class="sneaker">Sneaker Company</p>
+          <h1 class="headText">Fall Limited Edition Sneakers</h1>
+          <p class="lightGrey">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="priceWrap">
+            <div class="newPriceWrap">
+              <h2 class="price">$125.00</h2>
+              <p class="fiftySale">50%</p>
+            </div>
+            <p class="oldPrice">$250.00</p>
+          </div>
+        </div>
+        <div class="addWrap">
+          <div class="amountWrap">
+            <img class="minus" src="images/icon-minus.svg" alt="-" />
+            <p class="addNum">0</p>
+            <img class="plus" src="images/icon-plus.svg" alt="+" />
+          </div>
+          <button class="addCartBtn">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#69707D"
+                fill-rule="nonzero"
+              />
+            </svg>
+            <!-- <img src="images/icon-cart.svg" alt="shop"> -->
+            Add to cart
+          </button>
         </div>
       </div>
-    </nav>
-    <div id="slider">
-      <button class="ctrl" id="back">
-        <!-- <img src="images/icon-previous.svg" alt="" srcset="" /> -->
-      </button>
-      <button class="ctrl" id="forward"></button>
-      <!-- slider  -->
-    </div>
-    <div class="textWrap">
-      <p class="sneaker">Sneaker Company</p>
-      <h1 class="headText">Fall Limited Edition Sneakers</h1>
-      <p class="lightGrey">
-        These low-profile sneakers are your perfect casual wear companion.
-        Featuring a durable rubber outer sole, they’ll withstand everything the
-        weather can offer.
-      </p>
-      <div class="priceWrap">
-        <div class="newPriceWrap">
-          <h2 class="price">$125.00</h2>
-          <p class="fiftySale">50%</p>
-        </div>
-        <p class="oldPrice">$250.00</p>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">BianGode</a>.
       </div>
-    </div>
-    <div class="addWrap">
-      <div class="amountWrap">
-        <img class="minus" src="images/icon-minus.svg" alt="-" />
-        <p class="addNum">0</p>
-        <img class="plus" src="images/icon-plus.svg" alt="+" />
-      </div>
-      <button class="addCartBtn">
-        <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
-        <!-- <img src="images/icon-cart.svg" alt="shop"> -->
-        Add to cart
-      </button>
-    </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">BianGode</a>.
     </div>
     <script src="main.js"></script>
   </body>
