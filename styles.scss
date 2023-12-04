@@ -188,6 +188,41 @@ header {
     }
   }
 }
+.sliderFloatWrap.on {
+  width: 55%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  .sliderFloat {
+    width: 60%;
+    background-image: url('images/image-product/image-product-1.jpg');
+    height: 50vh;
+    border-radius: 10px;
+    background-position: center;
+    background-size: contain;
+  }
+  .floatImages {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    img {
+      border-radius: 10px;
+      height: 100px;
+      width: 100px;
+    }
+    img:hover {
+      border: 2x solid hsl(26, 100%, 55%);
+
+    }
+  }
+
+}
+
 // styling for the sidebar
 .navigation.active {
   display: block;
@@ -358,10 +393,15 @@ h1 {
     grid-template-columns: 50% 50%;
     gap: 5rem;
     width: 85%;
-    margin-top: 10vh;
+    margin-top: 9vh;
     .sliderDiv {
       display: flex;
       flex-direction: column;
+      // width: 20rem;
+      #slider {
+        // height: 20rem;
+        
+      }
       .imageChooser {
         margin-top: 2rem;
         display: flex;

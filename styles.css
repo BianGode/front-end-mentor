@@ -185,6 +185,39 @@ header .cartButton .cartCount {
   transform: translate(-50%, -50%);
 }
 
+.sliderFloatWrap.on {
+  width: 55%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.sliderFloatWrap.on .sliderFloat {
+  width: 60%;
+  background-image: url("images/image-product/image-product-1.jpg");
+  height: 50vh;
+  border-radius: 10px;
+  background-position: center;
+  background-size: contain;
+}
+.sliderFloatWrap.on .floatImages {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.sliderFloatWrap.on .floatImages img {
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+}
+.sliderFloatWrap.on .floatImages img:hover {
+  border: 2x solid hsl(26, 100%, 55%);
+}
+
 .navigation.active {
   display: block;
   position: absolute;
@@ -353,7 +386,7 @@ h1 {
     grid-template-columns: 50% 50%;
     gap: 5rem;
     width: 85%;
-    margin-top: 10vh;
+    margin-top: 9vh;
   }
   .contentContainer .sliderDiv {
     display: flex;

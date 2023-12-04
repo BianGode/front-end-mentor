@@ -130,3 +130,18 @@ imageList.forEach((el, idx) => {
 // still to do
 // click on the big image to create a float 
 // image with small thumbnails to switch image
+
+slider.addEventListener('click', () => {
+  document.querySelector('blackBackground').classList.add('on')
+})
+
+const floatSlider = document.querySelector('.sliderFloat')
+const floatImages = document.querySelector('.floatImages').children
+ 
+for (let index = 0; index < floatImages.length; index++) {
+  const element = floatImages[index];
+  element.addEventListener('click',() => {
+    floatSlider.style.backgroundImage = "url(" + images[index] + ")";
+    console.log(floatImages[index]);
+  })
+}
