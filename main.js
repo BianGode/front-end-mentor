@@ -115,3 +115,18 @@ delButton.addEventListener('click' ,() => {
   timesEl.textContent = 0;
   cartCount.textContent = 0;
 })
+
+// function to switch the images
+const imageList = document.querySelectorAll('.imageList')
+
+imageList.forEach((el, idx) => {
+  console.log(idx);
+
+  el.addEventListener('click', () => {
+    slider.style.backgroundImage = "url(" + images[idx] + ")";
+  })
+})
+
+// still to do
+// click on the big image to create a float 
+// image with small thumbnails to switch image
