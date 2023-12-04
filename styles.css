@@ -185,6 +185,10 @@ header .cartButton .cartCount {
   transform: translate(-50%, -50%);
 }
 
+.sliderFloatWrap {
+  display: none;
+}
+
 .sliderFloatWrap.on {
   width: 55%;
   position: absolute;
@@ -402,7 +406,8 @@ h1 {
     width: 80px;
     display: grid;
   }
-  .contentContainer .sliderDiv .imageChooser .imageList img, .contentContainer .sliderDiv .imageChooser .imageList .lightBgHover {
+  .contentContainer .sliderDiv .imageChooser .imageList img,
+  .contentContainer .sliderDiv .imageChooser .imageList .lightBgHover {
     grid-column: 1;
     grid-row: 1;
   }

@@ -131,10 +131,8 @@ imageList.forEach((el, idx) => {
 // click on the big image to create a float 
 // image with small thumbnails to switch image
 
-slider.addEventListener('click', () => {
-  document.querySelector('blackBackground').classList.add('on')
-})
 
+// function to make floating slider change picture
 const floatSlider = document.querySelector('.sliderFloat')
 const floatImages = document.querySelector('.floatImages').children
  
@@ -145,3 +143,24 @@ for (let index = 0; index < floatImages.length; index++) {
     console.log(floatImages[index]);
   })
 }
+
+
+// function to toggle the float slider and blackbackground
+const floatSliderWrap = document.querySelector('.sliderFloatWrap')
+
+slider.addEventListener('click', () => {
+  document.querySelector('.blackBackground').classList.add('on')
+  floatSliderWrap.classList.add('on')
+  console.log('testt');
+})
+
+window.addEventListener('click', (e) => {
+  if(floatSliderWrap.contains(e.target)) {
+    return;
+  } else {
+    if(blackBg.classList.contains('on')) {
+      blackBg.classList.remove('on')
+      floatSliderWrap.classList.remove('on')
+    }
+  }
+})
